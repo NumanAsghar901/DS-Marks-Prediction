@@ -43,14 +43,17 @@ for predicting student marks using machine learning models.
 """)
 
 # -------------------------------
-# Workflow Diagram
+# Workflow Diagram (Small & Centered)
 st.header("Workflow / Pipeline")
 
-st.image(
-    "workflow_diagram.png",
-    caption="Prediction Workflow",
-    use_container_width=True
-)
+col1, col2, col3 = st.columns([1,2,1])
+
+with col2:
+    st.image(
+        "workflow_diagram.png",
+        caption="Prediction Workflow",
+        width=400
+    )
 
 st.markdown("---")
 
@@ -101,7 +104,7 @@ fig_mae = px.bar(
 )
 
 # -------------------------------
-# Display Charts (Responsive Columns)
+# Display Charts (Responsive)
 col1, col2 = st.columns(2)
 
 with col1:
